@@ -1,0 +1,29 @@
+package lpa;
+
+import java.util.Scanner;
+
+public class AtivVetor2 {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+        int[] numero = new int[5];
+        int soma = 0;
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Digite o " + (i + 1) + "º valor inteiro:");
+            numero[i] = ler.nextInt();
+        }
+        soma = 0;
+        for (int valor : numero) {
+            soma += valor;
+        }
+        System.out.println("A soma dos valores é: " + soma);
+        if (soma > 15) {
+            System.out.println("A soma é maior que 15.");
+        } else {
+            System.out.println("A soma não é maior que 15.");
+        }
+
+        ler.close();
+    }
+}
